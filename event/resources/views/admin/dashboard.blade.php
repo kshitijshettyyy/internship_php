@@ -30,7 +30,7 @@
                     <td>{{$data->name}}</td>
                     <td>{{$data->phone}}</td>
                     <td>{{$data->usertype}}</td>
-                    <td>{{$data->enail}}</td>
+                    <td>{{$data->email}}</td>
                     <td>
                       <a href="#" class="btn btn-success">EDIT</a>
                     </td>
