@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\EventsController;
+use App\Models\User;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -23,8 +24,9 @@ Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Route::group(['middleware' => ['auth','admin']], function () {
-    Route::get('/dashboard', function () {
-        return view('admin.dashboard');
+    Route::get('/dashboard', function () { 
+        $user=User::all();
+        return view('admin.dashboard')->with('user',$user);
     });
 });
 

@@ -20,30 +20,25 @@
                 <TH>PHONE</TH>
                 <TH>USER TYPE</TH>
                 <TH>EMAIL</TH>
-              </thead>
+                <th>EDIT</th>
+                <th>DELETE</th>
+              </thead>  
               <tbody>
-                {{-- @foreach($aser as $data)
+                @foreach($user as $data)
                 <tr>
                     <td>{{$data->id}}</td>
                     <td>{{$data->name}}</td>
-                    <td>{{$data->usertype}}</td>
                     <td>{{$data->phone}}</td>
+                    <td>{{$data->usertype}}</td>
+                    <td>{{$data->enail}}</td>
+                    <td>
+                      <a href="#" class="btn btn-success">EDIT</a>
+                    </td>
+                    <td>
+                      <a href="#" class="btn btn-danger">DELETE</a>
+                    </td>
                 </tr>
-                @endforeach                 --}}
-                <tr>
-                  <td>1</td>
-                  <td>Kshitij</td>
-                  <td>8951526990</td>
-                  <td>admin</td>
-                  <td>4nm21is069@nmamit.in</td>
-                </tr>
-                <tr>
-                  <td>2</td>
-                  <td>bruno</td>
-                  <td>6366091636</td>
-                  <td>NULL</td>
-                  <td>xyz@gmail.com</td>
-                </tr>
+                @endforeach                
               </tbody>
             </table>
           </div>
