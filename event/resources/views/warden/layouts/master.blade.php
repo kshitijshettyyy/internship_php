@@ -38,16 +38,16 @@
 
 <body class="">
   <div class="wrapper ">
-    <div class="sidebar" data-color="blue">
+    <div class="sidebar" data-color="green">
       <!--
         Tip 1: You can change the color of the sidebar using: data-color="blue | green | orange | red | yellow"
     -->
       <div class="logo">
         <a href="http://www.creative-tim.com" class="simple-text logo-mini">
-        AD
+        WD
         </a>
         <a href="http://www.creative-tim.com" class="simple-text logo-normal">
-          ADMIN DASHBOARD
+          WARDEN DASHBOARD
         </a>
       </div>
       <div class="sidebar-wrapper" id="sidebar-wrapper">
@@ -55,19 +55,19 @@
           <li class="{{'newevent'==request()->path() ? 'active' : '' }}">
             <a href="/newevent">
               <i class="now-ui-icons design_bullet-list-67"></i>
-              <p>New Event</p>
+              <p>Action 1</p>
             </a>
           </li>
           <li class="{{'dashboard'==request()->path() ? 'active' : '' }}">
             <a href="/dashboard">
               <i class="now-ui-icons users_single-02"></i>
-              <p>Users</p>
+              <p>Action 2</p>
             </a>
           </li>
           <li class="{{'events'==request()->path() ? 'active' : '' }}">
             <a href="/events">
               <i class="now-ui-icons design_bullet-list-67"></i>
-              <p>Events</p>
+              <p>Action 3</p>
             </a>
           </li>
         

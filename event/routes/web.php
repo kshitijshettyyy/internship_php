@@ -28,7 +28,13 @@ Route::group(['middleware' => ['auth','admin']], function () {
         $user=User::all();
         return view('admin.dashboard')->with('user',$user);
     });
+    Route::put('/user_update/{id}',[EventsController::class,'update_user']);
+    Route::get('/role-edit/{id}',[EventsController::class,'edit_user']);
 });
+
+Route::get('/warden',[EventsController::class,'warden']);
+
+
 
 
 Route::get('/events',[EventsController::class,'index']);
