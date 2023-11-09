@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Admin;
 use App\Models\Event;
+use App\Models\News;
 use App\Models\User;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
@@ -19,6 +20,10 @@ class EventsController extends Controller
     {
         return view('admin.newevent');
     }
+    public function new_news()
+    {
+        return view('admin.news');
+    }
     public function store(Request $request)
     {
         $event=new Event();        //instance of eloquent model created
@@ -31,7 +36,21 @@ class EventsController extends Controller
 
         $event->save();
         return redirect('/events')->with('success','event added');
-    }   
+    }
+    public function store_news(Request $request)
+    {
+        $news=new News();        //instance of eloquent model created
+        $news->title= $request->input('title');
+        $news->content= $request->input('content');
+        $news->occurance= $request->input('occurance');
+
+        $news->save();
+        return redirect('/news')->with('success','news added');
+    }      
+
+
+
+
     public function edit_user(Request $request,$id) 
     {
         $user=User::findOrFail($id);

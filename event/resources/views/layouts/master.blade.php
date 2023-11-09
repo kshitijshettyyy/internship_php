@@ -70,6 +70,12 @@
               <p>Events</p>
             </a>
           </li>
+          <li class="{{'news'==request()->path() ? 'active' : '' }}">
+            <a href="/news">
+              <i class="now-ui-icons design_bullet-list-67"></i>
+              <p>Add news</p>
+            </a>
+          </li>
         
         </ul>
       </div>

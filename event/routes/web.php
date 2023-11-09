@@ -30,6 +30,7 @@ Route::group(['middleware' => ['auth','admin']], function () {
     });
     Route::put('/user_update/{id}',[EventsController::class,'update_user']);
     Route::get('/role-edit/{id}',[EventsController::class,'edit_user']);
+
 });
 
 Route::get('/warden',[EventsController::class,'warden']);
@@ -41,3 +42,6 @@ Route::get('/events',[EventsController::class,'index']);
 Route::get('/newevent',[EventsController::class,'new']);
 
 Route::post('/save-event',[EventsController::class,'store']);
+
+Route::get('/news',[EventsController::class,'new_news']);
+Route::post('/save-news',[EventsController::class,'store_news']);

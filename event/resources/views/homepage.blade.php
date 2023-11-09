@@ -23,6 +23,7 @@
   <div class="card-body">
       <div class="table-responsive">
         <table class="table">
+          <h1>EVENTS</h1>
           <thead class=" text-primary">
             <th>NO.</th>
             <th>NAME</th>
@@ -59,6 +60,12 @@
             
           </tbody>
         </table>
+        <h1>News</h1>
+        @foreach ($news as $item)
+            <h3>{{$item->title}}</h3>
+            <h4>{{$item->content}}</h4>
+            <h4>{{$item->occurance}}</h4>
+        @endforeach
       </div>
     </div>
     <h1></h1>
